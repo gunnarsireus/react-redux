@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        {userStatus==='loading'? (<FontAwesomeIcon icon={faSpinner} />):null}
+        <FontAwesomeIcon icon={faSpinner} spin style={userStatus==='idle'? {opacity:'0'}:{opacity:'1'}}/>
         <User />
         <Counter />
         <p>
